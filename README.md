@@ -4,13 +4,20 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/Falcone-eye)
 
 <!-- AI:start:what-it-does -->
-_Description pending._
+Falcone Eye is a Windows service that monitors user directories for new files and creates secure backups automatically. It addresses the need to preserve files that may be deleted or altered, ensuring data retention in environments where file integrity is critical.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-_Architecture documentation pending._
+Falcone Eye consists of a Python-based Windows service that monitors user-specified directories for new files and creates secure backups. The service uses a file watcher to detect changes and a backup handler to copy files to a designated backup location. It operates in the background and logs all activities for auditing purposes. The main script, `falcone_eye.py`, initializes the service, sets up directory monitoring, and handles backup operations. Configuration options, such as monitored directories and backup paths, are defined within the script. The repository structure is as follows:
+
+```plaintext
+.
+├── .gitignore          # Specifies files and directories to ignore in version control
+├── README.md           # Project documentation
+├── falcone_eye.py      # Main script for the Falcone Eye service
+```
 <!-- AI:end:architecture -->
 
 ## Install
